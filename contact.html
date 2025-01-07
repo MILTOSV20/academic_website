@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <nav>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" class="open-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </label>
+  
+        <label id="overlay" for="sidebar-active"></label>
+  
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </label>
+          <a class="home-link" href="index.html">Home</a>
+          <!-- Projects with Submenu -->
+          <div class="dropdown">
+            <a href="projects.html">Projects</a>
+            <ul class="submenu">
+              <li><a href="options_pricing.html">Options Pricing Models</a></li>
+              <li><a href="regression_analysis.html">Regression Analysis</a></li>
+              <li><a href="stock_valuation.html">NVIDIA</a></li>
+            </ul>
+          </div>
+          <a href="">Academic</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+  
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-content">
+          <h1>About me</h1>
+          <p>I am graduate with an economics degree from University Of Macedonia currently doing my  <br> 
+              masters in accounting and finance. My academic interests and job skills revolve <br> 
+              around analyss of financial securities with the use of machine learninng.
+          </p>
+        </div>
+      </header>
+
+
+      <!-- CONTACT SECTION -->
+       <main class="container">
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>
+              Feel free to reach out via email or connect with me on LinkedIn.
+            </p>
+            <div class="contact-info">
+              <p>Email: <a href="mailto:miltosvout@gmail.com">miltosvout@gmail.com</a></p>
+              <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/john-doe/" target="_blank"
+                  >linkedin.com/in/john-doe</a
+                >
+              </p>
+            </div>
+          </div>
+       </main>
+    
+</body>
+</html>

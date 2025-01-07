@@ -1,76 +1,76 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-html{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
+html {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
 }
-body{
-    min-height: 100vh;
-    min-height: 100dvh;
-    line-height: 1.6;
-    background-color: #ffffff;
-    color: #000000;
-  }
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000000;
+}
 
 /* Navigation */
 nav {
-    height: 60px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; /* aligns items vertically */
-    border-bottom: 1px solid #e5e5e5;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* aligns items vertically */
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
-.links-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* aligns items vertically */
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* aligns items vertically */
 }
 
 nav a {
-    height: 100%;
-    display: flex;
-    padding: 0 20px;
-    gap: 2rem;
-    list-style: none;
-    color: #1a1a1a;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  padding: 0 20px;
+  gap: 2rem;
+  list-style: none;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+  align-items: center;
 }
 
-
 nav a:hover {
-    background-color: #706f6fda;
+  background-color: #706f6fda;
 }
 
 nav .home-link {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 nav svg {
-    fill: black;
+  fill: black;
 }
 
-#sidebar-active{
-    display: none;
+#sidebar-active {
+  display: none;
 }
 
-.open-sidebar-button, .close-sidebar-button {
-    display: none;
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
 }
 
 /* Dropdown container */
@@ -118,71 +118,70 @@ nav svg {
   display: block;
 }
 
-@media(max-width:514px){
-    .links-container{
-        flex-direction: column;
-        align-items: flex-start; /* Align items at the top */
-        justify-content: flex-start; /* Start items from the top */
+@media (max-width: 514px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start; /* Start items from the top */
 
-        position: fixed;
-        top: 0;
-        right: -100%; /* Sidebar starts hidden */
-        z-index: 10;
-        width: 200px;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Sidebar starts hidden */
+    z-index: 10;
+    width: 200px;
 
-        background-color: white;
-        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-        transition: right 0.85s ease; /* Smooth transition for the 'right' property */
-    }
-    
-    nav a{
-        box-sizing: border-box;
-        height: auto;
-        width: 100%;
-        padding: 20px 30px;
-        justify-content: flex-start;
-        
-    }
-    .submenu {
-      position: static; /* Remove absolute positioning */
-      width: 100%; /* Full width for mobile */
-      box-shadow: none; /* Remove shadow for mobile */
-      border: none; /* Remove border */
-    }
-  
-    .submenu a {
-      padding: 15px 20px; /* Adjust padding for smaller screens */
-    }
-  
-    .dropdown:hover .submenu {
-      display: block; /* Ensure it shows up on hover/click */
-    }
-    .open-sidebar-button {
-        position: absolute; /* Position relative to the nav */
-        top: 50%; /* Vertically center it in the nav */
-        right: 20px; /* Move it to the right side */
-        transform: translateY(-50%); /* Correct the vertical centering */
-        padding: 20px;
-        display: block;
-        cursor: pointer; /* Add a pointer cursor for better UX */
-    }
-    .open-sidebar-button, .close-sidebar-button {
-        padding: 20px;
-        display: block;
-    }
-    #sidebar-active:checked ~ .links-container{
-        right: 0;
-    }
-    #sidebar-active:checked ~ #overlay{
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9;
-    }
+    background-color: white;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: right 0.85s ease; /* Smooth transition for the 'right' property */
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .submenu {
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Full width for mobile */
+    box-shadow: none; /* Remove shadow for mobile */
+    border: none; /* Remove border */
+  }
+
+  .submenu a {
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .dropdown:hover .submenu {
+    display: block; /* Ensure it shows up on hover/click */
+  }
+  .open-sidebar-button {
+    position: absolute; /* Position relative to the nav */
+    top: 50%; /* Vertically center it in the nav */
+    right: 20px; /* Move it to the right side */
+    transform: translateY(-50%); /* Correct the vertical centering */
+    padding: 20px;
+    display: block;
+    cursor: pointer; /* Add a pointer cursor for better UX */
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
 }
-
 
 /* Header */
 header {
@@ -210,13 +209,12 @@ header {
   opacity: 0.9;
 }
 
-
 .container {
   background-color: white;
   width: 75%; /* Matches the width of main */
   min-height: 63dvh;
   margin: 0 auto; /* Center main horizontally */
-  
+
   display: flex;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2), -4px 0 8px rgba(0, 0, 0, 0.2);
   border-left: 1px solid #e5e5e5;
@@ -228,9 +226,8 @@ header {
   gap: 2rem;
 }
 
-
 /* CARDS */
-.card{
+.card {
   height: 200px;
   display: flex;
   margin: 2rem;
@@ -239,13 +236,13 @@ header {
   border-radius: 4px;
   transition: transform 0.2s ease;
 }
-.card:hover{
+.card:hover {
   transform: translateY(-4px);
 }
-.card-body{
+.card-body {
   padding: 2rem;
 }
-.card-title{
+.card-title {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -263,53 +260,53 @@ header {
 .card-bottom-container {
   margin-top: -1rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .card-bottom {
+  width: 100%;
   flex: 1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1rem 5%;
-    }
+  .navbar {
+    padding: 1rem 5%;
+  }
 
-    .container {
-        width: 90%;
-        margin: 2rem auto;
-    }
+  .container {
+    width: 90%;
+    margin: 2rem auto;
+  }
 
-    .card-bottom-container {
-        flex-direction: column;
-    }
+  .card-bottom-container {
+    flex-direction: column;
+  }
 
-    .header-content h1 {
-        font-size: 2rem;
-    }
+  .header-content h1 {
+    font-size: 2rem;
+  }
 
-    .nav-links {
-        justify-content: center;
-    }
+  .nav-links {
+    justify-content: center;
+  }
 }
 
-
-footer{
+footer {
   color: white;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 10px; 
-  background-color: black; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
   border-top: 1px solid #ddd;
 }
 
-footer p{
+footer p {
   margin: 0;
 }
 
-footer div{
-  display: flex; 
+footer div {
+  display: flex;
   gap: 10px;
 }

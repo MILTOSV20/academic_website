@@ -109,6 +109,10 @@
     .feature-item-1 {
       grid-area: feature-item-1; /* Take up the first grid area */
     }
+    .feature-item-1 img {
+      width: 1000px;
+      height: 400px;
+    }
 
     .feature-item-2 {
       grid-area: feature-item-2; /* Take up the second grid area */
@@ -116,15 +120,25 @@
     .feature-item-3 {
       grid-area: feature-item-3; /* Take up the third grid area */
     }
-    /* Responsive for wider screens (>=768px)
-    @media (min-width: 768px) {
+    .feature-item-2 img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .feature-item-3 img {
+      width: 400px;
+      height: 400px;
+    }
+    
+    /* Responsive for wider screens (>=768px) */
+    /* @media (min-width: 768px) {
       .features-grid {
-        grid-template-columns: 2fr 1fr 1fr; /* One large and two smaller items next to each other 
-        grid-gap: 0;  No gap between items, just borders
+        grid-template-columns: 2fr 1fr 1fr;  One large and two smaller items next to each other 
+        grid-gap: 0;  No gap between items, just borders 
       }
 
       .feature-item.large {
-        grid-column: span 2; Take two-thirds of the grid 
+        grid-column: span 2; /* Take two-thirds of the grid 
       }
     } */
 
@@ -186,19 +200,24 @@
   <!-- Features Section -->
   <section id="features" class="features">
     <div class="container">
-      <h2 class="section-title">Key Features</h2>
       <div class="features-grid">
         <div class="feature-item feature-item-1">
           <h3>Responsive Design</h3>
+          <img src="./icons/misc-math-abstract-digital-art-wallpaper-preview.jpg" alt="">
           <p>Adapts to all screen sizes for the best user experience.</p>
+          <button class="read-button">Read</button>
         </div>
         <div class="feature-item feature-item-2">
           <h3>Customizable</h3>
+          <img src="./icons/Untitled.jpeg" alt="">
           <p>Fully customizable and flexible to suit your needs.</p>
+          <button class="read-button">Read</button>
         </div>
         <div class="feature-item feature-item-3">
           <h3>Modern Design</h3>
+          <img src="./icons/1_lwils93aT3t9c99l0Fiyww.png" alt="Modern design illustration">
           <p>A clean, modern aesthetic perfect for any project.</p>
+          <button class="read-button">Read</button>
         </div>
       </div>
     </div>

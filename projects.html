@@ -5,6 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .project-container {
+  background-color: white;
+  width: 75%; /* Matches the width of main */
+  min-height: 63dvh;
+  margin: 0 auto; /* Center main horizontally */
+  padding: 2rem;
+  
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2), -4px 0 8px rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+
+  display: flex; /* Use flex to align items inside */
+  flex-direction: column; /* Cards stack vertically */
+  align-items: center; /* Center cards horizontally */
+  justify-content: center; /* Center cards vertically */
+}
+
+/* For card-top-p and card-bottom-container-p to have the same width */
+.card-top-p, .card-bottom-container-p {
+  width: 100%; /* Use the same width */
+  display: flex;
+  color: white;
+  text-emphasis: bold;
+  justify-content: center;
+}
+
+.card-p {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0e0000;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-top-p {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-image: url('./icons/misc-math-abstract-digital-art-wallpaper-preview.jpg'); /* Add background image */
+}
+
+.card-bottom-container-p {
+  margin-top: 2rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* For each card inside bottom container */
+.card-bottom-p {
+  flex: 1;
+  margin: 0 1rem; /* Margin between cards */
+}
+
+/* Styling for text and image positioning */
+.card-body {
+  text-align: center;
+  z-index: 1; /* Ensure the text appears above the image */
+}
+
+img {
+  width: 100%; /* Remove fixed height to keep image proportion */
+  height: auto;
+  display: block;
+}
+
+    </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -59,10 +130,10 @@
 
     <!-- MAIN CONTENT -->
 
-    <main class="container">
-      <div class="card card-top">
+    <main class="project-container">
+      <div class="card-p card-top-p">
         <div class="card-body">
-          <img src="" alt="">
+          <!-- <img src="./icons/misc-math-abstract-digital-art-wallpaper-preview.jpg""> -->
           <h2 class="card-title">Options Pricing Models</h2>
           <p class="card-text">
             Implement two fundamental approaches to options pricing: the Black-Scholes model and the binomial model.
@@ -70,8 +141,8 @@
         </div>
       </div>
 
-      <div class="card-bottom-container">
-        <div class="card card-bottom">
+      <div class="card-bottom-container-p">
+        <div class="card-p card-bottom-p">
           <div class="card-body">
             <img src="" alt="">
             <h3 class="card-title">Regression Analysis</h3>
@@ -81,7 +152,7 @@
           </div>
         </div>
 
-        <div class="card card-bottom">
+        <div class="card-p card-bottom-p">
           <div class="card-body">
             <img src="" alt="">
             <h3 class="card-title">NVIDIA Stock Valuation</h3>

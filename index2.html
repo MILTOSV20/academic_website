@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Massively - Dark Theme</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
   <style>
     /* General Styles */
     * {
@@ -15,9 +15,9 @@
     }
 
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       background-color: #121212; /* Dark background */
-      color: #e0e0e0; /* Light text */
+      color: #ffffff; /* Light text */
       line-height: 1.6;
     }
 
@@ -62,6 +62,84 @@
 
     .hero-button svg {
       fill: #ff7043;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: #121212;
+      height: 50px;
+    }
+
+    nav a {
+        height: 100%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        position: relative;
+        display: inline-flex;
+        align-items: center;      
+    }
+
+    nav .dropdown {
+        height: 100%;
+        position: relative;
+    }
+
+    nav .arrow {
+        margin-left: 0.5rem;
+        transition: transform 0.3s; /* Smooth rotation */
+        fill: currentColor; /* Ensures the SVG matches the text color */
+    }
+
+    /* Rotate arrow on hover */
+    nav .dropdown:hover .arrow {
+        transform: rotate(180deg); /* Rotate the arrow */
+    }
+
+     nav a:hover {
+      background-color: #ff7043;
+    }
+     
+    .dropdown-menu {
+      display: none; /* Initially hidden */
+      position: absolute;
+      left: 0;
+      top: 100%; /* Position below the link */
+      background-color: #1c1c1c;
+      padding: 0.5rem 1rem;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+      border-radius: 4px;
+      z-index: 10; /* Ensure the dropdown is on top */
+      text-align: left; /* Align the text to the left */
+      width: 200px; /* Adjust dropdown width */
+    }
+
+    
+    .dropdown:hover .dropdown-menu {
+      display: block; /* Show the dropdown */
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      color: #ffffff;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s; /* Smooth color transition */
+    }
+
+    /* Change link color on hover */
+    .dropdown-menu a:hover {
+      color: #ff7043; /* Accent color */
+    }
+
+    /* Fix to ensure hover state includes submenu */
+    .dropdown:hover {
+        visibility: visible; /* Keep the dropdown visible */
     }
 
     /* Features Section */
@@ -139,18 +217,7 @@
     
     
 
-    /* About Section */
-    .about {
-      background-color: #121212;
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .about-description {
-      font-size: 1.25rem;
-      color: #b0b0b0;
-      margin-top: 1rem;
-    }
+    
 
     /* Footer Section */
     .footer {
@@ -222,11 +289,32 @@
   </style>
 </head>
 <body>
+    <!-- NAVBAR-2 -->
+  <nav>
+    <a href="" class="home">Home</a>
+    <div class="dropdown">
+    <a href="" class="projects">Projects
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF" class="arrow"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+    </a>
+        <div class="dropdown-menu">
+            <a href="">Options Pricing Models</a>
+            <a href="">Regression Analysis</a>
+            <a href="">Stock Valuation</a>
+        </div>
+    </div>
+    <a href="" class="academic-interests">Academic Interests</a>
+    <a href="" class="about">About</a>
+    <a href="" class="contact">Contact</a>
+   </nav>
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1 class="hero-title">Welcome to Massively</h1>
-      <p class="hero-description">A modern website for your next big project.</p>
+      <h1 class="hero-title">Voutryas Miltiadis</h1>
+      <p class="hero-description">
+        Welcome to my website! I'm a Finance and Accounting master's 
+        student passionate about data analysis and machine learning, showcasing my projects, 
+        academic interests, and professional journey.
+      </p>
       <a href="#features" class="hero-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
           <path d="M12 16l4-4h-3V4h-2v8H8z"/>
@@ -234,27 +322,59 @@
       </a>
     </div>
   </section>
-
+  
   <!-- Features Section -->
   <section id="features" class="features">
     <div class="container">
+
+    <!-- NAVBAR-2 -->
+    <nav style="background-color: #2c2c2c;">
+        <a href="" class="home">Home</a>
+        <div class="dropdown">
+            <a href="" class="projects">Projects</a>
+            <div class="dropdown-menu">
+                <a href="">Options Pricing Models</a>
+                <a href="">Regression Analysis</a>
+                <a href="">Stock Valuation</a>
+            </div>
+        </div>
+        <a href="" class="academic-interests">Academic Interests</a>
+        <a href="" class="about">About</a>
+        <a href="" class="contact">Contact</a>
+    </nav>
+
+
       <div class="features-grid">
         <div class="feature-item feature-item-1">
-          <h3>Responsive Design</h3>
+          <h3>Personal Projects</h3>
           <img src="./icons/misc-math-abstract-digital-art-wallpaper-preview.jpg" alt="">
-          <p>Adapts to all screen sizes for the best user experience.</p>
+          <p>
+            Explore a collection of personal projects in finance, accounting, data analysis, 
+            and machine learning. 
+            Each project includes a detailed description, code snippets, and visualizations.
+          </p>
           <button class="read-button">Read</button>
         </div>
         <div class="feature-item feature-item-2">
-          <h3>Customizable</h3>
+          <h3>Academic Interests</h3>
           <img src="./icons/Untitled.jpeg" alt="">
-          <p>Fully customizable and flexible to suit your needs.</p>
+          <p>
+            Dive into academic work, including a focus on my master’s thesis, 
+            which explores advanced concepts at the intersection of finance, accounting, 
+            and data-driven methodologies. 
+            This section highlights research-driven insights and analytical rigor.
+          </p>
           <button class="read-button">Read</button>
         </div>
         <div class="feature-item feature-item-3">
-          <h3>Modern Design</h3>
+          <h3>About</h3>
           <img src="./icons/1_lwils93aT3t9c99l0Fiyww.png" alt="Modern design illustration">
-          <p>A clean, modern aesthetic perfect for any project.</p>
+          <p>
+            Learn more about professional experience,
+             academic background, and technical skills. 
+             This section includes a detailed resume and an overview of 
+             expertise in finance, accounting, data analysis, and machine learning.
+          </p>
           <button class="read-button">Read</button>
         </div>
       </div>

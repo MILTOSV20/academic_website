@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.homepage {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 87px;
+    padding: 24px 0;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+}
+
+.frame-1 {
+    flex: 1;
+}
+
+.frame-3 {
+    width: 205px;
+    justify-content: flex-end;
+}
+
+.frame-4 {
+    width: 100%;
+    height: 30px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 554px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.rectangle {
+    background-color: #d9d9d9;
+}
+
+.rectangle-6 {
+    flex: 1;
+    height: 336px;
+}
+
+.rectangle-7, .rectangle-8, .rectangle-10, .rectangle-11 {
+    flex: 1;
+    height: 358px;
+}
+
+.rectangle-10, .rectangle-11 {
+    height: 371px;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86px;
+    background-color: #d9d9d9;
+}
+
+.rectangle-9 {
+    width: 100%;
+    height: 100%;
+}
+
+    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="homepage">
+        <header class="header">
+            <div class="frame frame-1">
+                <div class="frame frame-3">
+                    <div class="frame frame-4"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <img class="hero-image" src="https://via.placeholder.com/1440x554" alt="Placeholder Image">
+        </section>
+
+        <main class="content">
+            <div class="row">
+                <div class="rectangle rectangle-6"></div>
+            </div>
+            <div class="row">
+                <div class="rectangle rectangle-7"></div>
+                <div class="rectangle rectangle-8"></div>
+            </div>
+            <div class="row">
+                <div class="rectangle rectangle-10"></div>
+                <div class="rectangle rectangle-11"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="rectangle rectangle-9"></div>
+        </footer>
+    </div>
+</body>
+</html>
